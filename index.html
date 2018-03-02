@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>New York Times Search</title>
+    <!-- Bootswatch Styling for Improving the Aesthetics -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+  <!-- Font Awesome CSS Icons (For cool glyphicons) -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css">
+  <link href="https://cdn.quilljs.com/1.3.3/quill.snow.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <!-- Style to fix the issue of text extending past panel length -->
+  
+</head>
+
+<body>
+
+  <!-- Main Bootstrap Search -->
+  <div class="grid">
+  		<div class="col1">
+  			<button id="advanced">Advanced Options</button>
+			<div id="options" class="prompt-selector hidden">
+				<div>
+					<span class="glyphicon glyphicon-pencil"></span>
+					<span id="back">X</span>
+				</div>
+				<div id="prompt-selector" class="subgrid">
+					<button class="selector">
+						<p id="one-selector">Initial</p>		
+					</button>
+					<button class="selector">
+						<p id="biome-selector">Biome</p>		
+					</button>
+					<button class="selector">
+						<p id="characteristic-selector">Characteristic</p>		
+					</button>
+					<button class="selector">
+						<p id="verb-selector">Action</p>					
+					</button>
+					<button class="selector">
+						<p id="vehicle-selector">Vehicle</p>			
+					</button>
+					<button class="selector">
+						<p id="color-selector">Color</p>				
+					</button>
+					<button class="selector">
+						<p id="animal-selector">Animal</p>		
+					</button>
+				</div>
+				<hr>
+				<div class="center-block">
+					<input id="new-prompt" required="true">
+					<button id="submit-new" class="btn">Submit a new word</button>
+				</div>
+				<hr>
+				<button id="submit" class="btn">Submit</button>
+			</div>
+  		</div>
+  		<div vlass="col2">
+  			<div class="def-container">
+  				<div >
+  					<div>	
+  						<div id="def-name"></div>
+  					</div>
+  					<div>
+  						<div id="fos"></div>
+  					</div>
+   					<div>
+  						<div id="define"></div>
+  					</div>
+  					<div>
+	 		 			<i id="next-arrow" aria-hidden="true"></i>
+					</div>
+  				</div>
+  			</div>          
+	  		<div class="special">
+  				<div >
+  					<textarea id="prompt-value"></textarea>
+  				</div>
+			</div>
+		</div>
+	<div class="col3">
+		<div class="advanced-prompt">
+  			<div id="advanced-prompt" class="subgrid2">
+  				<div class="prompt-container hidden">
+  					<div>Random: </div>
+  					<div id="one-prompt" class="prompt"></div>
+  				</div>
+  				<div class="prompt-container hidden">
+  					<div>Biome: </div>
+  					<div id="biome-prompt" class="prompt"></div>	
+  				</div>	
+				<div class="prompt-container hidden">
+					<div>Characteristic: </div>
+					<div id="characteristic-prompt" class="prompt"></div>
+				</div>
+				<div class="prompt-container hidden">
+					<div>Verb: </div>
+					<div id="verb-prompt" class="prompt"></div>
+				</div>
+				<div class="prompt-container hidden">
+					<div>Vehicle: </div>
+					<div id="vehicle-prompt" class="prompt"></div>	
+				</div>
+				<div class="prompt-container hidden">
+					<div>Color: </div>
+					<div id="color-prompt" class="prompt"></div>		
+				</div>	
+				<div class="prompt-container hidden">
+					<div>Animal: </div>
+					<div id="animal-prompt" class="prompt"></div>		
+				</div>	
+			</div>
+  		</div>
+	</div>
+
+
+
+  	<div class="error-prompt">
+  		<div >
+  			<div>
+  				<p id="no-word" class="hidden alert alert-danger">Sorry, we couldn't find any words related to <span id="error-prompt-word"></span>.</p>
+  				<p id="only-letters" class="hidden alert alert-danger">Please insert letters only</p>
+  			</div>
+  		</div>
+  	</div>
+
+
+  </div>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.js" integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE=" crossorigin="anonymous"></script>  
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script> -->
+ <script src="prompt.js"></script>
+
+</body>
+
+</html>
